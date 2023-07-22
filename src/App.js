@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AddEmployeeForm from './addEmployeeForm';
-import EditEmployeeForm from './editEmployeeForm';
-import EmployeeDetails from './employeeDetails';
-import EmployeeList from './employeeList';
-import SearchEmployee from './searchEmployee';
-import DepartmentList from './departmentList';
+import AddEmployeeForm from './components/addEmployeeForm';
+import EditEmployeeForm from './components/editEmployeeForm';
+import EmployeeDetails from './components/employeeDetails';
+import EmployeeList from './components/employeeList';
+import SearchEmployee from './components/searchEmployee';
+import DepartmentList from './components/departmentList';
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
       <Switch>
         <Route
           exact
-          path='/add-employee'
+          path='/'
           render={(props) => <AddEmployeeForm {...props} />}
         />
         <Route

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './departmentList.css'; // Import the CSS file
+import '../style/departmentList.css'; // Import the CSS file
 
 const DepartmentList = () => {
   const [departments, setDepartments] = useState([])
