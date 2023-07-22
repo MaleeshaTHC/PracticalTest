@@ -1,13 +1,12 @@
 // DepartmentList.js (JSX file)
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../style/departmentList.css'; // Import the CSS file
+import '../style/departmentList.css'; 
 
 const DepartmentList = () => {
   const [departments, setDepartments] = useState([])
 
   useEffect(() => {
-    // Fetch all departments using HTTP GET
     axios
       .get('http://examination.24x7retail.com/api/v1.0/Departments', {
         headers: { 'API-Key': '?D(G+KbPeSgVkYp3s6v9y$B&E)H@McQf' },
@@ -16,12 +15,12 @@ const DepartmentList = () => {
         setDepartments(response.data)
       })
       .catch((error) => {
-        // Handle error
+        console.error('Error:', error);
       })
   }, [])
 
   return (
-    <div className="department-list-container"> {/* Apply the department list container class */}
+    <div className="department-list-container"> 
       <h2>Department List</h2>
       {departments.length === 0 ? (
         <div>Loading...</div>

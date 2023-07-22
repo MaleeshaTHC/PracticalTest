@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../style/addEmployeeForm.css'; // Import the CSS file
+import '../style/addEmployeeForm.css';
 
 const AddEmployeeForm = () => {
   const [employee, setEmployee] = useState({
@@ -21,24 +21,31 @@ const AddEmployeeForm = () => {
     setEmployee((prevEmployee) => ({ ...prevEmployee, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    axios
-      .post('http://examination.24x7retail.com/api/v1.0/Employee', employee, {
-        headers: { 'API-Key': '?D(G+KbPeSgVkYp3s6v9y$B&E)H@McQf' },
-      })
-      .then((response) => {
-        // Handle successful employee addition
-        console.log('Employee added successfully:', response.data)
-      })
-      .catch((error) => {
-        // Handle error
-        console.error('Error adding employee:', error)
-      })
-  }
+  const [successMessage, setSuccessMessage] = useState('');
+const [errorMessage, setErrorMessage] = useState('');
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  axios
+    .post('http://examination.24x7retail.com/api/v1.0/Employee', employee, {
+      headers: { 'API-Key': '?D(G+KbPeSgVkYp3s6v9y$B&E)H@McQf' },
+    })
+    .then((response) => {
+      console.log('Employee added successfully:', response.data);
+      setSuccessMessage('Employee added successfully!');
+      setErrorMessage('');
+    })
+    .catch((error) => {
+      console.error('Error adding employee:', error);
+      setSuccessMessage('');
+      setErrorMessage('Failed to add employee.');
+    });
+};
+
 
   return (
     <form  className="form-container" onSubmit={handleSubmit}>
+      <h2>Employee Registration Form</h2>
       <div>
         <label>Employee Number:</label>
         <input
@@ -122,7 +129,8 @@ const AddEmployeeForm = () => {
           onChange={handleChange}
         />
       </div>
-      <div>
+
+      <div className="checkbox-container">
         <label>Active:</label>
         <input
           type='checkbox'
@@ -136,7 +144,11 @@ const AddEmployeeForm = () => {
           }
         />
       </div>
-      <button type='submit' className="submit-button">Add Employee</button>
+      <div>
+        <button type='submit' className="submit-button">Add Employee</button>
+      </div>
+      {successMessage && <p className="success-message">{successMessage}</p>}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
     </form>
   )
 }

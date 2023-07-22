@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import '../style/employeeList.css'; // Import the CSS file
+import '../style/employeeList.css';
 
 const EmployeeList = () => {
   const [employees, setEmployees] = useState([])
 
   useEffect(() => {
-    // Fetch all employee records using HTTP GET
     axios
       .get('http://examination.24x7retail.com/api/v1.0/Employees', {
         headers: { 'API-Key': '?D(G+KbPeSgVkYp3s6v9y$B&E)H@McQf' },
@@ -15,7 +14,7 @@ const EmployeeList = () => {
         setEmployees(response.data)
       })
       .catch((error) => {
-        // Handle error
+        console.error('Error:', error);
       })
   }, [])
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import '../style/searchEmployee.css'; // Import the CSS file
+import '../style/searchEmployee.css'; 
 
 const SearchEmployee = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -11,7 +11,6 @@ const SearchEmployee = () => {
   }
 
   const handleSearch = () => {
-    // Perform search using HTTP GET
     axios
       .get(
         `http://examination.24x7retail.com/api/v1.0/Employees?search=${searchTerm}`,
@@ -23,7 +22,7 @@ const SearchEmployee = () => {
         setSearchResults(response.data)
       })
       .catch((error) => {
-        // Handle error
+        console.error('Error:', error);
       })
   }
 

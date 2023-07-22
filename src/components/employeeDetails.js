@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../style/employeeDetails.css'; // Import the CSS file
+import '../style/employeeDetails.css';
 
 const EmployeeDetails = ({ match }) => {
   const [employee, setEmployee] = useState(null);
 
   useEffect(() => {
-    // Fetch the single employee record using HTTP GET.
     axios
       .get(
         `http://examination.24x7retail.com/api/v1.0/Employee/${match.params.empNo}`,
@@ -18,7 +17,7 @@ const EmployeeDetails = ({ match }) => {
         setEmployee(response.data);
       })
       .catch((error) => {
-        // Handle error
+        console.error('Error:', error);
       });
   }, [match.params.empNo]);
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import '../style/editEmployeeForm.css'; // Import the CSS file
+import '../style/editEmployeeForm.css';
 
 const EditEmployeeForm = ({ match }) => {
   const [employee, setEmployee] = useState({
@@ -17,7 +17,6 @@ const EditEmployeeForm = ({ match }) => {
   })
 
   useEffect(() => {
-    // Fetch the existing employee details using HTTP GET
     axios
       .get(
         `http://examination.24x7retail.com/api/v1.0/Employee/${match.params.empNo}`,
@@ -49,10 +48,9 @@ const EditEmployeeForm = ({ match }) => {
         }
       )
       .then((response) => {
-        // Handle successful employee update
-      })
+        console.log('Employee updated successfully:', response.data);      })
       .catch((error) => {
-        // Handle error
+        console.error('Error:', error);
       })
   }
 
