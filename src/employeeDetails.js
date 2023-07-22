@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import './employeeDetails.css'; // Import the CSS file
 
 const employeeDetails = ({ match }) => {
   const [employee, setEmployee] = useState(null)

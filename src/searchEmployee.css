@@ -1,0 +1,62 @@
+/* searchEmployee.css */
+
+/* Container for the search employee component */
+.search-employee-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the search employee heading */
+  .search-employee-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the input field and search button */
+  .search-employee-container input[type='text'] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .search-employee-container button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-employee-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for the message when no matching employees found */
+  .search-employee-container div {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* Styling for the matching employees list */
+  .search-employee-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .search-employee-container li {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Styling for employee name and number */
+  .search-employee-container li strong {
+    margin-right: 5px;
+  }
+  

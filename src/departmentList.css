@@ -1,0 +1,39 @@
+/* departmentList.css */
+
+/* Container for the department list */
+.department-list-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the department list heading */
+  .department-list-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the loading message */
+  .department-list-container div {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  /* Styling for the department list */
+  .department-list-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .department-list-container li {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Styling for department name and ID */
+  .department-list-container li strong {
+    margin-right: 5px;
+  }
+  

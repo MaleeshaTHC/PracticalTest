@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
+import './addEmployeeForm.css'; // Import the CSS file
 
 const addEmployeeForm = () => {
   const [employee, setEmployee] = useState({

@@ -1,6 +1,6 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import './employeeList.css'; // Import the CSS file
 
 const employeeList = () => {
   const [employees, setEmployees] = useState([])

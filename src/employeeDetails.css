@@ -1,0 +1,52 @@
+/* employeeDetails.css */
+
+/* Container for the employee details */
+.employee-details-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the employee details heading */
+  .employee-details-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the loading message */
+  .employee-details-container div {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  /* Styling for employee details paragraphs */
+  .employee-details-container p {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Styling for employee number */
+  .employee-details-container p strong:first-child {
+    margin-right: 5px;
+  }
+  
+  /* Styling for employee name and address */
+  .employee-details-container p strong {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+  }
+  
+  /* Styling for the 'Is Active' status */
+  .employee-details-container p strong:last-child {
+    margin-right: 5px;
+  }
+  
+  /* Styling for the 'Is Active' value */
+  .employee-details-container p span {
+    color: ${({ isActive }) => (isActive ? 'green' : 'red')};
+    font-weight: bold;
+  }
+  
