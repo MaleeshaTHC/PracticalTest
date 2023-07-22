@@ -38,7 +38,7 @@ const AddEmployeeForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form  className="form-container" onSubmit={handleSubmit}>
       <div>
         <label>Employee Number:</label>
         <input
@@ -136,7 +136,7 @@ const AddEmployeeForm = () => {
           }
         />
       </div>
-      <button type='submit'>Add Employee</button>
+      <button type='submit' className="submit-button">Add Employee</button>
     </form>
   )
 }

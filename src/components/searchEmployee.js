@@ -28,7 +28,7 @@ const SearchEmployee = () => {
   }
 
   return (
-    <div>
+    <div className='search-employee-container'>
       <h2>Search Employee</h2>
       <input
         type='text'
@@ -46,8 +46,15 @@ const SearchEmployee = () => {
           <ul>
             {searchResults.map((employee) => (
               <li key={employee.empNo}>
-                <strong>{employee.name}</strong> - Employee Number:{' '}
-                {employee.empNo}
+                <strong>{employee.empName}</strong> - Employee Number:{' '}
+                {employee.empAddressLine1}
+                {employee.empAddressLine2}
+                {employee.empAddressLine3}
+                {employee.departmentCode}
+                {employee.dateOfJoin}
+                {employee.dateOfBirth}
+                {employee.basicSalary}
+                {employee.isActive}
               </li>
             ))}
           </ul>

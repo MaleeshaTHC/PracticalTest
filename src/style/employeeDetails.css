@@ -10,41 +10,23 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for the form heading */
+/* Styling for the heading */
 .employee-details-container h2 {
   margin-bottom: 10px;
 }
 
-/* Styling for input fields and labels */
-.employee-details-container label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
+/* Styling for individual employee details */
 .employee-details-container p {
   margin-bottom: 5px;
   font-size: 14px;
 }
 
-/* Styling for employee number */
-.employee-details-container p strong:first-child {
+/* Styling for strong tags within the employee details */
+.employee-details-container strong {
   margin-right: 5px;
 }
 
-/* Styling for employee name and address */
-.employee-details-container p strong {
-  display: inline-block;
-  width: 150px;
-  font-weight: bold;
-}
-
-/* Styling for the 'Is Active' status */
-.employee-details-container p strong:last-child {
-  margin-right: 5px;
-}
-
-/* Styling for the 'Is Active' value */
+/* Styling for the "Is Active" status */
 .employee-details-container .isActive-true {
   color: green;
   font-weight: bold;

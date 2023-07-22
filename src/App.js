@@ -1,46 +1,26 @@
+// App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AddEmployeeForm from './components/addEmployeeForm';
-import EditEmployeeForm from './components/editEmployeeForm';
-import EmployeeDetails from './components/employeeDetails';
-import EmployeeList from './components/employeeList';
-import SearchEmployee from './components/searchEmployee';
-import DepartmentList from './components/departmentList';
+import HomePage from './components/HomePage';
+import AddEmployeeForm from './components/AddEmployeeForm';
+import EditEmployeeForm from './components/EditEmployeeForm';
+import EmployeeDetails from './components/EmployeeDetails';
+import EmployeeList from './components/EmployeeList';
+import SearchEmployee from './components/SearchEmployee';
+import DepartmentList from './components/DepartmentList';
+import './style/homePage.css'; // Import the CSS file
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        <Route
-          exact
-          path='/'
-          render={(props) => <AddEmployeeForm {...props} />}
-        />
-        <Route
-          exact
-          path='/edit-employee/:empNo'
-          render={(props) => <EditEmployeeForm {...props} />}
-        />
-        <Route
-          exact
-          path='/employee/:empNo'
-          render={(props) => <EmployeeDetails {...props} />}
-        />
-        <Route
-          exact
-          path='/employee-list'
-          render={(props) => <EmployeeList {...props} />}
-        />
-        <Route
-          exact
-          path='/search-employee'
-          render={(props) => <SearchEmployee {...props} />}
-        />
-        <Route
-          exact
-          path='/departments'
-          render={(props) => <DepartmentList {...props} />}
-        />
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/add-employee' component={AddEmployeeForm} />
+        <Route exact path='/edit-employee/:empNo' component={EditEmployeeForm} />
+        <Route exact path='/employee/:empNo' component={EmployeeDetails} />
+        <Route exact path='/employee-list' component={EmployeeList} />
+        <Route exact path='/search-employee' component={SearchEmployee} />
+        <Route exact path='/departments' component={DepartmentList} />
       </Switch>
     </Router>
   );

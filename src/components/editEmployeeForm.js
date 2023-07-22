@@ -57,7 +57,7 @@ const EditEmployeeForm = ({ match }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="edit-employee-form-container">
       <div>
         <label>Employee Number:</label>
         <input
@@ -158,7 +158,7 @@ const EditEmployeeForm = ({ match }) => {
           required
         />
       </div>
-      <button type='submit'>Update Employee</button>
+      <button type='submit' className="submit-button">Update Employee</button>
     </form>
   )
 }

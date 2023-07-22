@@ -23,11 +23,11 @@ const EmployeeDetails = ({ match }) => {
   }, [match.params.empNo]);
 
   if (!employee) {
-    return <div>Loading...</div>;
+    return <div className='employee-details-container'>Loading...</div>;
   }
 
   return (
-    <div className="employee-details-container">
+    <div className='employee-details-container'>
       <h2>Employee Details</h2>
       <p>
         <strong>Employee Number:</strong> {employee.empNo}

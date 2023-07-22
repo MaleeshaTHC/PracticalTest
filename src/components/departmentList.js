@@ -1,3 +1,4 @@
+// DepartmentList.js (JSX file)
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../style/departmentList.css'; // Import the CSS file
@@ -20,7 +21,7 @@ const DepartmentList = () => {
   }, [])
 
   return (
-    <div>
+    <div className="department-list-container"> {/* Apply the department list container class */}
       <h2>Department List</h2>
       {departments.length === 0 ? (
         <div>Loading...</div>

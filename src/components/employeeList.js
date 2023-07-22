@@ -20,7 +20,7 @@ const EmployeeList = () => {
   }, [])
 
   return (
-    <div>
+    <div className='employee-list-container'>
       <h2>Employee List</h2>
       {employees.length === 0 ? (
         <div>Loading...</div>

@@ -2,46 +2,43 @@
 
 /* Container for the employee list */
 .employee-list-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Styling for the employee list heading */
-  .employee-list-container h2 {
-    margin-bottom: 10px;
-  }
-  
-  /* Styling for the loading message */
-  .employee-list-container div {
-    margin-bottom: 10px;
-    font-style: italic;
-  }
-  
-  /* Styling for the employee list */
-  .employee-list-container ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .employee-list-container li {
-    margin-bottom: 15px;
-    font-size: 14px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-  }
-  
-  /* Styling for employee name and number */
-  .employee-list-container li strong {
-    margin-right: 5px;
-  }
-  
-  /* Styling for employee details */
-  .employee-list-container li span {
-    display: block;
-    margin-bottom: 3px;
-  }
-  
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the employee list heading */
+.employee-list-container h2 {
+  margin-bottom: 10px;
+}
+
+/* Styling for the loading message */
+.employee-list-container div {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+/* Styling for the employee list */
+.employee-list-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.employee-list-container li {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Styling for employee name and number */
+.employee-list-container li strong {
+  margin-right: 5px;
+}
+
+/* Styling for individual employee details */
+.employee-list-container li span {
+  display: block;
+  margin-top: 5px;
+}
