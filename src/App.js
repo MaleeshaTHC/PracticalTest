@@ -1,32 +1,49 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom' // Import Switch from react-router-dom
-
-import AddEmployeeForm from './addEmployeeForm'
-import EditEmployeeForm from './editEmployeeForm'
-import EmployeeDetails from './employeeDetails'
-import EmployeeList from './employeeList'
-import SearchEmployee from './searchEmployee'
-import DepartmentList from './departmentList'
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AddEmployeeForm from './addEmployeeForm';
+import EditEmployeeForm from './editEmployeeForm';
+import EmployeeDetails from './employeeDetails';
+import EmployeeList from './employeeList';
+import SearchEmployee from './searchEmployee';
+import DepartmentList from './departmentList';
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        {' '}
-        {/* Use Switch from react-router-dom */}
-        <Route exact path='/add-employee' component={AddEmployeeForm} />
+        <Route
+          exact
+          path='/add-employee'
+          render={(props) => <AddEmployeeForm {...props} />}
+        />
         <Route
           exact
           path='/edit-employee/:empNo'
-          component={EditEmployeeForm}
+          render={(props) => <EditEmployeeForm {...props} />}
         />
-        <Route exact path='/employee/:empNo' component={EmployeeDetails} />
-        <Route exact path='/employee-list' component={EmployeeList} />
-        <Route exact path='/search-employee' component={SearchEmployee} />
-        <Route exact path='/departments' component={DepartmentList} />
+        <Route
+          exact
+          path='/employee/:empNo'
+          render={(props) => <EmployeeDetails {...props} />}
+        />
+        <Route
+          exact
+          path='/employee-list'
+          render={(props) => <EmployeeList {...props} />}
+        />
+        <Route
+          exact
+          path='/search-employee'
+          render={(props) => <SearchEmployee {...props} />}
+        />
+        <Route
+          exact
+          path='/departments'
+          render={(props) => <DepartmentList {...props} />}
+        />
       </Switch>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

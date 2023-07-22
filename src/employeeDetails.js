@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './employeeDetails.css'; // Import the CSS file
 
 const EmployeeDetails = ({ match }) => {
-  const [employee, setEmployee] = useState(null)
+  const [employee, setEmployee] = useState(null);
 
   useEffect(() => {
     // Fetch the single employee record using HTTP GET.
@@ -15,19 +15,19 @@ const EmployeeDetails = ({ match }) => {
         }
       )
       .then((response) => {
-        setEmployee(response.data)
+        setEmployee(response.data);
       })
       .catch((error) => {
         // Handle error
-      })
-  }, [match.params.empNo])
+      });
+  }, [match.params.empNo]);
 
   if (!employee) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   return (
-    <div>
+    <div className="employee-details-container">
       <h2>Employee Details</h2>
       <p>
         <strong>Employee Number:</strong> {employee.empNo}
@@ -57,10 +57,13 @@ const EmployeeDetails = ({ match }) => {
         <strong>Basic Salary:</strong> {employee.basicSalary}
       </p>
       <p>
-        <strong>Is Active:</strong> {employee.isActive}
+        <strong>Is Active:</strong>
+        <span className={employee.isActive ? 'isActive-true' : 'isActive-false'}>
+          {employee.isActive ? 'Active' : 'Inactive'}
+        </span>
       </p>
     </div>
-  )
+  );
 }
 
-export default EmployeeDetails
+export default EmployeeDetails;
