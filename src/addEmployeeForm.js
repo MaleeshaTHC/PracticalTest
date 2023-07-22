@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './addEmployeeForm.css'; // Import the CSS file
 
-const addEmployeeForm = () => {
+const AddEmployeeForm = () => {
   const [employee, setEmployee] = useState({
     empNo: '',
     empName: '',
@@ -141,4 +141,4 @@ const addEmployeeForm = () => {
   )
 }
 
-export default addEmployeeForm
+export default AddEmployeeForm

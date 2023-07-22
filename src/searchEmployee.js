@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import './searchEmployee.css'; // Import the CSS file
 
-const searchEmployee = () => {
+const SearchEmployee = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [searchResults, setSearchResults] = useState([])
 
@@ -57,4 +57,4 @@ const searchEmployee = () => {
   )
 }
 
-export default searchEmployee
+export default SearchEmployee

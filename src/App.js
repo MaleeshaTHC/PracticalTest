@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom' // Import Switch from react-router-dom
 
-import addEmployeeForm from './addEmployeeForm'
-import editEmployeeForm from './editEmployeeForm'
-import employeeDetails from './employeeDetails'
-import employeeList from './employeeList'
-import searchEmployee from './searchEmployee'
-import departmentList from './departmentList'
+import AddEmployeeForm from './addEmployeeForm'
+import EditEmployeeForm from './editEmployeeForm'
+import EmployeeDetails from './employeeDetails'
+import EmployeeList from './employeeList'
+import SearchEmployee from './searchEmployee'
+import DepartmentList from './departmentList'
 
 const App = () => {
   return (
@@ -14,16 +14,16 @@ const App = () => {
       <Switch>
         {' '}
         {/* Use Switch from react-router-dom */}
-        <Route exact path='/add-employee' component={addEmployeeForm} />
+        <Route exact path='/add-employee' component={AddEmployeeForm} />
         <Route
           exact
           path='/edit-employee/:empNo'
-          component={editEmployeeForm}
+          component={EditEmployeeForm}
         />
-        <Route exact path='/employee/:empNo' component={employeeDetails} />
-        <Route exact path='/employee-list' component={employeeList} />
-        <Route exact path='/search-employee' component={searchEmployee} />
-        <Route exact path='/departments' component={departmentList} />
+        <Route exact path='/employee/:empNo' component={EmployeeDetails} />
+        <Route exact path='/employee-list' component={EmployeeList} />
+        <Route exact path='/search-employee' component={SearchEmployee} />
+        <Route exact path='/departments' component={DepartmentList} />
       </Switch>
     </Router>
   )

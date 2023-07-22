@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './employeeDetails.css'; // Import the CSS file
 
-const employeeDetails = ({ match }) => {
+const EmployeeDetails = ({ match }) => {
   const [employee, setEmployee] = useState(null)
 
   useEffect(() => {
@@ -63,4 +63,4 @@ const employeeDetails = ({ match }) => {
   )
 }
 
-export default employeeDetails
+export default EmployeeDetails

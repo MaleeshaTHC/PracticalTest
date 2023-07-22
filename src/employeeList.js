@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './employeeList.css'; // Import the CSS file
 
-const employeeList = () => {
+const EmployeeList = () => {
   const [employees, setEmployees] = useState([])
 
   useEffect(() => {
@@ -47,4 +47,4 @@ const employeeList = () => {
   )
 }
 
-export default employeeList
+export default EmployeeList

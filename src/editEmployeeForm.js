@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './editEmployeeForm.css'; // Import the CSS file
 
-const editEmployeeForm = ({ match }) => {
+const EditEmployeeForm = ({ match }) => {
   const [employee, setEmployee] = useState({
     empNo: '',
     empName: '',
@@ -163,4 +163,4 @@ const editEmployeeForm = ({ match }) => {
   )
 }
 
-export default editEmployeeForm
+export default EditEmployeeForm

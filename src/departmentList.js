@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './departmentList.css'; // Import the CSS file
 
-const departmentList = () => {
+const DepartmentList = () => {
   const [departments, setDepartments] = useState([])
 
   useEffect(() => {
@@ -38,4 +38,4 @@ const departmentList = () => {
   )
 }
 
-export default departmentList
+export default DepartmentList
