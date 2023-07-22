@@ -5,7 +5,7 @@ const employeeDetails = ({ match }) => {
   const [employee, setEmployee] = useState(null)
 
   useEffect(() => {
-    // Fetch the single employee record using HTTP GET
+    // Fetch the single employee record using HTTP GET.
     axios
       .get(
         `http://examination.24x7retail.com/api/v1.0/Employee/${match.params.empNo}`,
